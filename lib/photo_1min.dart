@@ -56,7 +56,8 @@ class Photoonemin extends StatelessWidget {
     );
   }
 
-  void _navigateToImageDetail(BuildContext context, String assetPath, int index) {
+  void _navigateToImageDetail(
+      BuildContext context, String assetPath, int index) {
     Navigator.of(context).push(
       CupertinoPageRoute(
         builder: (context) => ImageDetailPage(
@@ -72,11 +73,10 @@ class ImageDetailPage extends StatefulWidget {
   final List<String> imageAssetPaths;
   final int initialIndex;
 
-  ImageDetailPage({
-    Key? key,
+  const ImageDetailPage({
     required this.imageAssetPaths,
     required this.initialIndex,
-  }) : super(key: key);
+  }) : super();
 
   @override
   _ImageDetailPageState createState() => _ImageDetailPageState();
@@ -109,7 +109,7 @@ class _ImageDetailPageState extends State<ImageDetailPage> {
 
   Widget _buildImagePage(String assetPath) {
     return Center(
-     child: Center(
+      child: Center(
         child: Image.asset(assetPath),
       ),
     );

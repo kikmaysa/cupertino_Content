@@ -1,10 +1,8 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, camel_case_types, file_names
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, camel_case_types, file_names, use_key_in_widget_constructors
 
 import 'package:flutter/cupertino.dart';
 
 class VideoScreen extends StatelessWidget {
-  const VideoScreen({super.key});
-
   @override
   Widget build(BuildContext context) {
     return CupertinoTheme(

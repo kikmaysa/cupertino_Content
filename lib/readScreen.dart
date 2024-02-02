@@ -1,12 +1,9 @@
-// ignore_for_file: prefer_const_constructors, camel_case_types, file_names, unused_element
-
+// ignore_for_file: prefer_const_constructors, camel_case_types, file_names, unused_element, use_key_in_widget_constructors
 
 import 'package:cupertino_ios_ui_style/photo_1min.dart';
 import 'package:flutter/cupertino.dart';
 
 class ReadScreen extends StatelessWidget {
-  const ReadScreen({super.key});
-
   @override
   Widget build(BuildContext context) {
     return CupertinoTheme(
@@ -38,7 +35,7 @@ class ReadScreen extends StatelessWidget {
                   color: Color.fromARGB(255, 51, 30, 107),
                 ),
                 trailing: const CupertinoListTileChevron(),
-               onTap: () => _showAlertDialog(context),
+                onTap: () => _showAlertDialog(context),
               ),
               CupertinoListTile(
                 title: const Text('1 Min Read'),
@@ -80,7 +77,7 @@ void _showAlertDialog(BuildContext context) {
     context: context,
     builder: (BuildContext context) => CupertinoAlertDialog(
       title: const Text('Oops!'),
-      content: const Text("Sorrry Now we don't have content"),
+      content: const Text("Sorrry Now we don't have Challenge content"),
       actions: <CupertinoDialogAction>[
         CupertinoDialogAction(
           isDefaultAction: true,

@@ -1,6 +1,6 @@
 // ignore_for_file: prefer_const_constructors, use_key_in_widget_constructors, camel_case_types, file_names
 
-import 'package:cupertino_ios_ui_style/LogoutedScreen.dart';
+import 'package:cupertino_ios_ui_style/logoutedScreen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -102,7 +102,7 @@ void _showActionSheet(BuildContext context) {
             Navigator.pop(context);
             Navigator.push(
               context,
-              CupertinoPageRoute(builder: (context) => const LogoutedScreen()),
+              CupertinoPageRoute(builder: (context) => LogoutedScreen()),
             );
           },
           child: const Text('Log out'),

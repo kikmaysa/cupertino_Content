@@ -3,8 +3,6 @@
 import 'package:flutter/cupertino.dart';
 
 class LogoutedScreen extends StatelessWidget {
-  const LogoutedScreen({super.key});
-
   @override
   Widget build(BuildContext context) {
     return CupertinoTheme(
