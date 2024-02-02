@@ -77,7 +77,7 @@ void _showAlertDialog(BuildContext context) {
     context: context,
     builder: (BuildContext context) => CupertinoAlertDialog(
       title: const Text('Oops!'),
-      content: const Text("Sorrry Now we don't have Challenge content"),
+      content: const Text("Sorrry Now we don't have content"),
       actions: <CupertinoDialogAction>[
         CupertinoDialogAction(
           isDefaultAction: true,
