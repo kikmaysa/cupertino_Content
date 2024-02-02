@@ -48,11 +48,11 @@ class CupertinoTabBarExample extends StatelessWidget {
       tabBuilder: (BuildContext context, index) {
         switch (index) {
           case 0:
-            return readScreen();
+            return ReadScreen();
           case 1:
-            return videoScreen();
+            return VideoScreen();
           case 2:
-            return profileScreen();
+            return ProfileScreen();
           default:
             return Container();
         }

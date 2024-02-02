@@ -2,12 +2,8 @@
 
 import 'package:flutter/cupertino.dart';
 
-void main() {
-  runApp(loadPage());
-}
-
-class loadPage extends StatelessWidget {
-  const loadPage({super.key});
+class LoadPage extends StatelessWidget {
+  const LoadPage({super.key});
 
   @override
   Widget build(BuildContext context) {

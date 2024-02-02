@@ -2,12 +2,8 @@
 
 import 'package:flutter/cupertino.dart';
 
-void main() {
-  runApp(logoutedScreen());
-}
-
-class logoutedScreen extends StatelessWidget {
-  const logoutedScreen({super.key});
+class LogoutedScreen extends StatelessWidget {
+  const LogoutedScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

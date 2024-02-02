@@ -1,14 +1,11 @@
 // ignore_for_file: prefer_const_constructors, camel_case_types, file_names, unused_element
 
-import 'package:cupertino_ios_ui_style/loadPage.dart';
+
+import 'package:cupertino_ios_ui_style/photo_1min.dart';
 import 'package:flutter/cupertino.dart';
 
-void main() {
-  runApp(const readScreen());
-}
-
-class readScreen extends StatelessWidget {
-  const readScreen({super.key});
+class ReadScreen extends StatelessWidget {
+  const ReadScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -32,15 +29,7 @@ class readScreen extends StatelessWidget {
                   color: Color.fromARGB(255, 35, 23, 79),
                 ),
                 trailing: const CupertinoListTileChevron(),
-                onTap: () {
-                  Navigator.of(context).push(
-                    CupertinoPageRoute<void>(
-                      builder: (BuildContext context) {
-                        return loadPage();
-                      },
-                    ),
-                  );
-                },
+                onTap: () => _showAlertDialog(context),
               ),
               CupertinoListTile(
                 title: const Text('Recommends'),
@@ -49,15 +38,7 @@ class readScreen extends StatelessWidget {
                   color: Color.fromARGB(255, 51, 30, 107),
                 ),
                 trailing: const CupertinoListTileChevron(),
-                onTap: () {
-                  Navigator.of(context).push(
-                    CupertinoPageRoute<void>(
-                      builder: (BuildContext context) {
-                        return loadPage();
-                      },
-                    ),
-                  );
-                },
+               onTap: () => _showAlertDialog(context),
               ),
               CupertinoListTile(
                 title: const Text('1 Min Read'),
@@ -70,7 +51,7 @@ class readScreen extends StatelessWidget {
                   Navigator.of(context).push(
                     CupertinoPageRoute<void>(
                       builder: (BuildContext context) {
-                        return loadPage();
+                        return Photoonemin();
                       },
                     ),
                   );
@@ -94,24 +75,21 @@ class readScreen extends StatelessWidget {
 }
 
 // This shows a CupertinoModalPopup which hosts a CupertinoAlertDialog.
-  void _showAlertDialog(BuildContext context) {
-    showCupertinoModalPopup<void>(
-      context: context,
-      builder: (BuildContext context) => CupertinoAlertDialog(
-        title: const Text('Oops!'),
-        content: const Text("Sorrry Now we don't have Challenge content"),
-        actions: <CupertinoDialogAction>[
-          
-          CupertinoDialogAction(
-
-            isDefaultAction: true,
-            onPressed: () {
-              Navigator.pop(context);
-              
-            },
-            child: const Text('ok'),
-          ),
-        ],
-      ),
-    );
-  }
+void _showAlertDialog(BuildContext context) {
+  showCupertinoModalPopup<void>(
+    context: context,
+    builder: (BuildContext context) => CupertinoAlertDialog(
+      title: const Text('Oops!'),
+      content: const Text("Sorrry Now we don't have content"),
+      actions: <CupertinoDialogAction>[
+        CupertinoDialogAction(
+          isDefaultAction: true,
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          child: const Text('ok'),
+        ),
+      ],
+    ),
+  );
+}

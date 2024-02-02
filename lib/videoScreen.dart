@@ -2,12 +2,8 @@
 
 import 'package:flutter/cupertino.dart';
 
-void main() {
-  runApp(const videoScreen());
-}
-
-class videoScreen extends StatelessWidget {
-  const videoScreen({super.key});
+class VideoScreen extends StatelessWidget {
+  const VideoScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
