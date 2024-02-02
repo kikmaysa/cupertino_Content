@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors, camel_case_types, file_names, unused_element, use_key_in_widget_constructors
 
+import 'package:cupertino_ios_ui_style/articleScreen.dart';
 import 'package:cupertino_ios_ui_style/photo_1min.dart';
 import 'package:flutter/cupertino.dart';
 
@@ -26,7 +27,7 @@ class ReadScreen extends StatelessWidget {
                   color: Color.fromARGB(255, 35, 23, 79),
                 ),
                 trailing: const CupertinoListTileChevron(),
-                onTap: () => _showAlertDialog(context),
+                onTap: () => _showAlertDialogforArticle(context),
               ),
               CupertinoListTile(
                 title: const Text('Recommends'),
@@ -77,15 +78,48 @@ void _showAlertDialog(BuildContext context) {
     context: context,
     builder: (BuildContext context) => CupertinoAlertDialog(
       title: const Text('Oops!'),
-      content: const Text("Sorrry Now we don't have content"),
+      content: const Text("Sorry Now we don't have content"),
       actions: <CupertinoDialogAction>[
         CupertinoDialogAction(
           isDefaultAction: true,
           onPressed: () {
             Navigator.pop(context);
           },
-          child: const Text('ok'),
+          child: const Text('OK'),
         ),
+      ],
+    ),
+  );
+}
+
+// This shows a CupertinoModalPopup which hosts a CupertinoAlertDialog.
+void _showAlertDialogforArticle(BuildContext context) {
+  showCupertinoModalPopup<void>(
+    context: context,
+    builder: (BuildContext context) => CupertinoAlertDialog(
+      title: const Text("Sorry, Now we don't have content"),
+      content: const Text("Do you want to go this page?"),
+      actions: <CupertinoDialogAction>[
+        CupertinoDialogAction(
+          isDefaultAction: true,
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          child: const Text('Cancel'),
+        ),
+        CupertinoDialogAction(
+
+            isDefaultAction: false,
+            onPressed: () {
+              Navigator.pop(context);
+              Navigator.push(
+              context,
+              CupertinoPageRoute(builder: (context) => ArticleScreen()),
+            );
+            },
+            child: const Text('Yes'),
+          ),
+        
       ],
     ),
   );
