@@ -7,7 +7,7 @@ class ArticleScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return CupertinoTheme(
       data: CupertinoThemeData(
-        brightness: Brightness.light,
+        brightness: Brightness.dark,
       ),
       child: CupertinoPageScaffold(
         navigationBar: CupertinoNavigationBar(
